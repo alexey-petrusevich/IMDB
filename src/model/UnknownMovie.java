@@ -17,7 +17,7 @@ final class UnknownMovie implements IMovie {
   }
 
   @Override
-  public int getMovieLength() {
+  public int getMovieDuration() {
     throw new IllegalArgumentException("Cannot retrieve length of the UnknownMovie");
   }
 }

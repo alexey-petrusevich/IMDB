@@ -21,9 +21,9 @@ interface IMovie {
   String getMovieName();
 
   /**
-   * Returns the length of this movie in seconds.
+   * Returns the duration of this movie in seconds.
    *
-   * @return the length of this movie in seconds
+   * @return the duration of this movie in seconds
    */
-  int getMovieLength();
+  int getMovieDuration();
 }
