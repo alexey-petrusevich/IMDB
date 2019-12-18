@@ -15,8 +15,8 @@ final class Movie implements IMovie {
   private final String name;
   private final int duration;
   private final Date releaseDate;
-  private final IMoviePerson director;
-  private final List<IMoviePerson> cast;
+  private final AMoviePerson director;
+  private final List<AMoviePerson> cast;
 
   /**
    * Returns an instance of this {@code Movie}.

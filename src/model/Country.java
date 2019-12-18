@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 /**
  * Represents a country of origin of a movie.
  */
@@ -15,7 +17,7 @@ enum Country {
    * @param countryName the name of the country
    */
   Country(String countryName) {
-    this.countryName = countryName;
+    this.countryName = Objects.requireNonNull(countryName);
   }
 
   /**

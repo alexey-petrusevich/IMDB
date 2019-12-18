@@ -1,12 +1,21 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Represents an unknown movie actor.
  */
-final class UnknownActor implements IMoviePerson {
+final class UnknownActor extends AMoviePerson {
+
+  /**
+   * Returns an instance of {@code AMoviePerson}.
+   */
+  UnknownActor() {
+    super("Unknown", "Unknown", new Date(0, Calendar.JANUARY, 0), new ArrayList<>());
+  }
 
   @Override
   public String getFirstName() {

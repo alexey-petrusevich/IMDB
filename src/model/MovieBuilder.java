@@ -17,8 +17,8 @@ final class MovieBuilder {
   String name;
   int duration;
   Date releaseDate;
-  IMoviePerson director;
-  List<IMoviePerson> cast;
+  AMoviePerson director;
+  List<AMoviePerson> cast;
 
   /**
    * Returns an instance of this {@code MovieBuilder}.
@@ -107,7 +107,7 @@ final class MovieBuilder {
    * @param director the director of this movie
    * @return this movie builder
    */
-  MovieBuilder setDirector(IMoviePerson director) {
+  MovieBuilder setDirector(AMoviePerson director) {
     this.director = director;
     return this;
   }
@@ -118,7 +118,7 @@ final class MovieBuilder {
    * @param cast the list of actors of this movie
    * @return this movie builder
    */
-  MovieBuilder setCast(List<IMoviePerson> cast) {
+  MovieBuilder setCast(List<AMoviePerson> cast) {
     this.cast = cast;
     return this;
   }
@@ -130,7 +130,7 @@ final class MovieBuilder {
    * @return this movie builder
    * @throws IllegalArgumentException if the given cast member is already in the list
    */
-  MovieBuilder addCastMember(IMoviePerson actor) throws IllegalArgumentException {
+  MovieBuilder addCastMember(AMoviePerson actor) throws IllegalArgumentException {
     if (this.cast.contains(actor)) {
       throw new IllegalArgumentException(String.format("%s is already in", actor.toString()));
     }

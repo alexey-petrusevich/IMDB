@@ -6,11 +6,7 @@ import java.util.List;
 /**
  * Represents an actor of a movie.
  */
-final class Actor implements IMoviePerson {
-  private final String firstName;
-  private final String lastName;
-  private final Date birthday;
-  private final List<IMovie> movies;
+final class Actor extends AMoviePerson {
 
   /**
    * Returns an instance of this {@code Actor}.
@@ -21,34 +17,6 @@ final class Actor implements IMoviePerson {
    * @param movies    the list of movies this actor appears in
    */
   Actor(String firstName, String lastName, Date birthday, List<IMovie> movies) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthday = birthday;
-    this.movies = movies;
-  }
-
-  @Override
-  public String getFirstName() {
-    return this.firstName;
-  }
-
-  @Override
-  public String getLastName() {
-    return this.lastName;
-  }
-
-  @Override
-  public Date getBirthDay() {
-    return this.birthday;
-  }
-
-  @Override
-  public List<IMovie> getMovies() {
-    return this.movies;
-  }
-
-  @Override
-  public String toString() {
-    return this.firstName.concat(" ").concat(this.lastName);
+    super(firstName, lastName, birthday, movies);
   }
 }
